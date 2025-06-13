@@ -1,0 +1,33 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<h2>사용자 {% if form.instance.pk %}수정{% else %}생성{% endif %}</h2>
+<form method="post">
+  {% csrf_token %}
+
+
+  {% for field in form %}
+    <div class="col-xl-{{ field.field.widget.attrs.cols|default:12 }} fieldWrapper-{{ field.id_for_label }}">
+      {{ field.errors }}
+
+      <label for="{{ field.id_for_label }}" class="form-label">
+        {{ field.field.widget.attrs.label|default:field.label }}
+        {% if field.field.required %}
+          <span class="text-danger">*</span>
+        {% endif %}
+      </label>
+
+      {{ field }}
+
+      {% if field.help_text %}
+        <div class="form-text" id="{{ field.auto_id }}_helptext">
+          {{ field.help_text|safe }}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  <button type="submit">저장</button>
+</form>
+
+<a href="{% url 'accounts:user_list' %}">취소</a>
+{% endblock %}

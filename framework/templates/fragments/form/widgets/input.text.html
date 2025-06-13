@@ -1,0 +1,9 @@
+{# templates/fragments/form/widgets/input.text.html #}
+<input
+    type="{{ widget.type }}"
+    name="{{ widget.name }}"
+    id="{{ widget.attrs.id|default:widget.name }}"
+    class="form-control {{ widget.attrs.class|default:'' }}"
+    value="{{ widget.value|default:'' }}"
+    {% include "django/forms/widgets/attrs.html" %}
+>

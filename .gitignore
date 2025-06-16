@@ -1,0 +1,73 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media files (업로드 파일들)
+media/
+
+# Static files (수동 관리시)
+staticfiles/
+
+# Pytest cache
+.pytest_cache/
+
+# mypy cache
+.mypy_cache/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Env files
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Pyre type checker
+.pyre/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Django migrations (migration 파일 제외하고 폴더 유지)
+!**/migrations/__init__.py
+**/migrations/*.py
+
+# __pycache__ 폴더 무시 (모든 경로)
+**/__pycache__/
+
+# Database folder (필요시)
+database/
